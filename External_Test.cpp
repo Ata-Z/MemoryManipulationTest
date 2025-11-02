@@ -10,17 +10,17 @@
 
 
 namespace Offsets {
-    constexpr uintptr_t Children = 0x68;
-    constexpr uintptr_t ChildrenEnd = 0x8;
-    constexpr uintptr_t WalkSpeed = 0x1DC;
-    constexpr uintptr_t WalkSpeedCheck = 0x3B8;
-    constexpr uintptr_t Parent = 0x58;
-    constexpr uintptr_t Name = 0x88;
-    constexpr uintptr_t LocalPlayer = 0x128;
-    constexpr uintptr_t FakeDataModelToDataModel = 0x1C0;
-    constexpr uintptr_t FakeDataModelPointer = 0x7097018;
-    constexpr uintptr_t CanCollide = 0x2E5;
-    constexpr uintptr_t Primitive = 0x178;
+    constexpr uintptr_t Children = 0x0;
+    constexpr uintptr_t ChildrenEnd = 0x0;
+    constexpr uintptr_t WalkSpeed = 0x0;
+    constexpr uintptr_t WalkSpeedCheck = 0x0;
+    constexpr uintptr_t Parent = 0x0;
+    constexpr uintptr_t Name = 0x0;
+    constexpr uintptr_t LocalPlayer = 0x0;
+    constexpr uintptr_t FakeDataModelToDataModel = 0x0;
+    constexpr uintptr_t FakeDataModelPointer = 0x0;
+    constexpr uintptr_t CanCollide = 0x0;
+    constexpr uintptr_t Primitive = 0x0;
 }
 
 HANDLE hProcess = nullptr;
@@ -210,7 +210,7 @@ int main() {
         return -1;
     }
 
-    uintptr_t base = GetModuleBase(L"RobloxPlayerBeta.exe", pid);
+    uintptr_t base = GetModuleBase(L"Redacted.exe", pid); // removed the program name
 
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
     std::cout << "Attached To RobloxPlayerBeta.exe" << std::endl;
